@@ -5,8 +5,12 @@ abstract class SplashScreenState {}
 
 class SplashScreenInitial extends SplashScreenState {}
 
-class InternetState extends SplashScreenState {}
+class InternetConnectedState extends SplashScreenState {}
+
+class InternetDisConnectedState extends SplashScreenState {}
 
 class IsAppFirstOpenState extends SplashScreenState {}
 
-class IsUserLoggedInState extends SplashScreenState {}
+class UserLoggedInState extends SplashScreenState {}
+
+class UserNotLoggedInState extends SplashScreenState {}

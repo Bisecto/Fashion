@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../view/important_pages/not_found_page.dart';
-import '../view/splash_screen.dart';
+import '../view/screens/splash_screen.dart';
 
 class AppRouter {
   ///All route name

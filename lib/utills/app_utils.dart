@@ -8,6 +8,17 @@ import 'package:intl/intl.dart';
 import '../res/app_colors.dart';
 
 class AppUtils {
+  Future<bool> checkConnectivity() async {
+    bool isConnected = await Connectivity().checkConnection().then((connected) async {
+      if (connected) {
+        return true;
+        //await openApp(context);
+      } else {
+        return false;
+      }
+    });
+    return isConnected;
+  }
 
   // checkPermission(BuildContext context) async {
   //   var permission = await Geolocator.checkPermission();
@@ -149,7 +160,6 @@ class AppUtils {
   //     }
   //  /// }
   // }
-
 
   static Size deviceScreenSize(BuildContext context) {
     MediaQueryData queryData;
