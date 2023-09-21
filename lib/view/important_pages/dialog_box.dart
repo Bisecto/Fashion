@@ -11,12 +11,11 @@ class MSG {
         behavior: SnackBarBehavior.floating,
         backgroundColor: Colors.transparent,
         content: AwesomeSnackbarContent(
-          title: 'title',
+          title: title,
           message:
-          'This is an example error message that will be shown in the body of snackbar!',
-
+          message,
           /// change contentType to ContentType.success, ContentType.warning or ContentType.help for variants
-          contentType: ContentType.failure,
+          contentType: ContentType.success,
         ),
       );
 
@@ -36,10 +35,9 @@ class MSG {
         behavior: SnackBarBehavior.floating,
         backgroundColor: Colors.transparent,
         content: AwesomeSnackbarContent(
-          title: 'title',
+          title: title,
           message:
-          'This is an example error message that will be shown in the body of snackbar!',
-
+          message,
           /// change contentType to ContentType.success, ContentType.warning or ContentType.help for variants
           contentType: ContentType.failure,
         ),
@@ -63,12 +61,11 @@ class MSG {
         behavior: SnackBarBehavior.floating,
         backgroundColor: Colors.transparent,
         content: AwesomeSnackbarContent(
-          title: 'title',
+          title: title,
           message:
-          'This is an example error message that will be shown in the body of snackbar!',
-
+message,
           /// change contentType to ContentType.success, ContentType.warning or ContentType.help for variants
-          contentType: ContentType.failure,
+          contentType: ContentType.warning,
         ),
       );
 
@@ -87,12 +84,11 @@ class MSG {
         behavior: SnackBarBehavior.floating,
         backgroundColor: Colors.transparent,
         content: AwesomeSnackbarContent(
-          title: 'title',
+          title: title,
           message:
-          'This is an example error message that will be shown in the body of snackbar!',
-
+message,
           /// change contentType to ContentType.success, ContentType.warning or ContentType.help for variants
-          contentType: ContentType.failure,
+          contentType: ContentType.help,
         ),
       );
 

@@ -22,14 +22,16 @@ class SplashScreenBloc extends Bloc<SplashScreenEvent, SplashScreenState> {
   FutureOr<void> splashScreenInitialEvent(
       SplashScreenInitialEvent event, Emitter<SplashScreenState> emit) async {
     emit(SplashScreenInitial());
+
     bool isConnected = await AppUtils().checkConnectivity();
     if (isConnected) {
       emit(InternetConnectedState());
       bool isFirstOpen = await SharedPref.getBool('firstOpen') ?? false;
-      if (isFirstOpen) {
+      if (!isFirstOpen) {
+        await SharedPref.putBool('firstOpen', false);
         emit(IsAppFirstOpenState());
       } else {
-        await SharedPref.putBool('firstOpen', true);
+
         AuthRepo authRepo = AuthRepo();
         bool isUserLoggedIn = await authRepo.isUserLoggedIn();
         if (isUserLoggedIn) {

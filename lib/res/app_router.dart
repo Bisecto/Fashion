@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../view/important_pages/not_found_page.dart';
+import '../view/screens/on_boarding_screen.dart';
 import '../view/screens/splash_screen.dart';
 
 class AppRouter {
@@ -29,8 +30,8 @@ class AppRouter {
     switch (routeSettings.name) {
       case splashScreen:
         return MaterialPageRoute(builder: (_) => const SplashScreen());
-      // case onBoardingScreen:
-      //   return MaterialPageRoute(builder: (_) => const OnBoardingScreen());
+      case onBoardingScreen:
+        return MaterialPageRoute(builder: (_) => const OnBoardingScreen());
       // case signInPage:
       //   return MaterialPageRoute(builder: (_) => const SignInPage());
       // case signUpPageGetStarted:
